@@ -1,4 +1,4 @@
-from Menu import *
+from Interface import *
 from time import sleep
 
 while True:
