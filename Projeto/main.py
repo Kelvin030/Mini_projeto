@@ -21,34 +21,33 @@ while True:
             with open('BD.txt','r') as file:
                 print(file.read())
 
-        except (FileNotFoundError):
+        except FileNotFoundError:
             print('Sem Cadastros'.center(40))
+            sleep(1.5)
         except:
             print('\033[31mErro!! Tente novamente\033[m')
-        sleep(2)
+        else:
+            sleep(2.5)
 
     elif escolha == 2:
         opção2()
         # Tratamento de erro
         while True:
             try:
-                nome = str(input('Digite o nome da pessoa:'))
-            except (ValueError, TypeError):
-                print("\033[31mNome Invalido \033[m")
-            except: 
-                print('\033[31mERRO!!!\033[m')
+                nome = str(input("Digite o nome da pessoa: "))
+            except:
+                print('\033[31mOcorreu um erro tente novamente\033[m')
             else:
                 break
 
         while True:
             try:
-                idade = int(input('Digite a idade da pessoa: '))
-            except (ValueError, TypeError):
-                print("\033[31mIdade Invalida \033[m")
+                idade = int(input("Digite a idade da pessoa:"))
             except:
-                print('\033[31mERRO!!!\033[m')
+                print('\033[31mOcorreu um erro tente novamente\033[m')
             else:
                 print("\033[32mCadastro feito com sucesso!!!\033[m")
+                sleep(1)
                 break
 
         # Armazenado Dados
@@ -60,4 +59,4 @@ while True:
         break
     else:
         print("\033[31mOpção invalida tente novamente!\033[m")
-
+        sleep(1)
