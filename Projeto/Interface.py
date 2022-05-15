@@ -22,3 +22,4 @@ def opção2():
     print('Opção 2'.center(40))
     print('-' * 40)
     sleep(3)
+

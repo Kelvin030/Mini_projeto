@@ -60,3 +60,4 @@ while True:
     else:
         print("\033[31mOpção invalida tente novamente!\033[m")
         sleep(1)
+
