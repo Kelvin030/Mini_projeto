@@ -34,7 +34,7 @@ while True:
         # Tratamento de erro
         while True:
             try:
-                nome = str(input("Digite o nome da pessoa: "))
+                nome = str(input("Nome:"))
             except:
                 print('\033[31mOcorreu um erro tente novamente\033[m')
             else:
@@ -42,7 +42,7 @@ while True:
 
         while True:
             try:
-                idade = int(input("Digite a idade da pessoa:"))
+                idade = int(input("Idade:"))
             except:
                 print('\033[31mOcorreu um erro tente novamente\033[m')
             else:
@@ -52,7 +52,7 @@ while True:
 
         # Armazenado Dados
         with open('BD.txt','a') as file:
-            file.write(f'{nome}\t\t\t{idade} Anos' + '\n')
+            file.write(f'{nome:<30}{idade:>5} Anos' + '\n')
 
     elif escolha == 3:
         print("\033[32mVolte sempre!\033[m")
